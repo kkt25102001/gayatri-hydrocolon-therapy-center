@@ -5,33 +5,36 @@
    ========================================================================== */
 
 :root {
-  /* Brand Colors from Logo */
-  --primary: #00828a;
-  --primary-dark: #005a60;
-  --primary-light: #e0f4f4;
-  --secondary: #00a896;
-  --secondary-glow: rgba(0, 168, 150, 0.35);
-  --accent-magenta: #d81b60;
+  /* Brand Colors from Gayatri Poster & Official Logo */
+  --primary: #007a87;          /* Clinical Deep Hydro Teal */
+  --primary-dark: #00565f;     /* Deep Oceanic Indigo-Teal */
+  --primary-light: #e6f7f8;    /* Pure Water Refresh Tint */
+  --secondary: #0284c7;        /* Crisp Hydro Blue */
+  --secondary-glow: rgba(0, 168, 181, 0.32);
+  --accent-magenta: #d81b60;   /* Magenta Rose from "Therapy clinic" */
   --accent-magenta-light: #fce4ec;
-  --nature-green: #10b981;
-  --nature-green-dark: #059669;
+  --nature-green: #2e7d32;     /* Herbal Leaf Green */
+  --nature-green-dark: #1b5e20;
+  --nature-green-light: #e8f5e9;
   --sun-gold: #f59e0b;
+  --water-cyan: #00a8b5;
   --water-blue: #0284c7;
+  --water-foam: #e0f2fe;
 
-  /* Light Theme Variables */
-  --bg-page: #f1f7f7;
+  /* Light Theme Variables (Clean, Crisp, Clinical White & Water Freshness) */
+  --bg-page: #f2f8f9;
   --bg-card: #ffffff;
-  --bg-card-subtle: #f8fafc;
+  --bg-card-subtle: #f8fcfc;
   --bg-input: #ffffff;
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-light: #64748b;
-  --border-color: #e2e8f0;
-  --border-highlight: rgba(0, 130, 138, 0.2);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 8px 24px rgba(0, 80, 80, 0.08);
-  --shadow-lg: 0 16px 36px rgba(0, 80, 80, 0.12);
-  --bottom-bar-bg: rgba(255, 255, 255, 0.94);
+  --text-main: #0c2328;        /* Deep marine navy slate */
+  --text-muted: #3a565e;
+  --text-light: #5f7f87;
+  --border-color: #dbebed;
+  --border-highlight: rgba(0, 122, 135, 0.22);
+  --shadow-sm: 0 2px 10px rgba(0, 80, 90, 0.04);
+  --shadow-md: 0 8px 26px rgba(0, 90, 100, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 90, 100, 0.12);
+  --bottom-bar-bg: rgba(255, 255, 255, 0.95);
 
   --radius-sm: 10px;
   --radius-md: 16px;
@@ -41,21 +44,21 @@
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Theme Variables */
+/* Dark Theme Variables (Deep Oceanic Blue & Glowing Cyan Accents) */
 [data-theme="dark"] {
-  --bg-page: #080f18;
-  --bg-card: #101c2b;
-  --bg-card-subtle: #162438;
-  --bg-input: #1a2c44;
-  --text-main: #f1f5f9;
+  --bg-page: #061118;
+  --bg-card: #0c1c28;
+  --bg-card-subtle: #122434;
+  --bg-input: #162b3c;
+  --text-main: #f0fdfa;
   --text-muted: #cbd5e1;
   --text-light: #94a3b8;
-  --border-color: #1e334d;
-  --border-highlight: rgba(0, 168, 150, 0.35);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.6);
-  --bottom-bar-bg: rgba(16, 28, 43, 0.94);
+  --border-color: #17364b;
+  --border-highlight: rgba(0, 168, 181, 0.4);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 26px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
+  --bottom-bar-bg: rgba(12, 28, 40, 0.95);
 }
 
 /* Base Styles */
@@ -180,13 +183,14 @@ body {
   transform: rotate(15deg) scale(1.05);
 }
 
-/* Hero Section / Profile Card */
+/* Hero Section / Profile Card (Styled to match the Official Clinic Poster) */
 .profile-header {
   position: relative;
   text-align: center;
-  padding: 24px 20px 20px;
-  background: linear-gradient(180deg, rgba(0, 130, 138, 0.08) 0%, rgba(16, 185, 129, 0.03) 70%, transparent 100%);
+  padding: 30px 20px 22px;
+  background: linear-gradient(180deg, rgba(0, 122, 135, 0.06) 0%, rgba(2, 132, 199, 0.03) 70%, transparent 100%);
   border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
 }
 
 .header-banner-bg {
@@ -194,18 +198,90 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
-  background: linear-gradient(135deg, #00828a 0%, #00a896 50%, #0284c7 100%);
-  opacity: 0.15;
+  height: 145px;
+  background: linear-gradient(180deg, #ffffff 0%, #edf9fa 55%, #e0f2fe 100%);
+  overflow: hidden;
   z-index: 0;
+  border-bottom: 1.5px solid rgba(0, 168, 181, 0.25);
+}
+
+[data-theme="dark"] .header-banner-bg {
+  background: linear-gradient(180deg, #09131d 0%, #0d2230 55%, #082937 100%);
+  border-bottom: 1.5px solid rgba(0, 168, 181, 0.4);
+}
+
+.header-leaf-left {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 85px;
+  height: 68px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 5px rgba(0, 80, 0, 0.15));
+}
+
+.header-leaf-right {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 85px;
+  height: 68px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 5px rgba(0, 80, 0, 0.15));
+}
+
+.header-hydro-waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 95px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Glassy 3D Water Droplets / Bubbles (Matches the Poster's Hydro Theme) */
+.water-drop {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.95) 0%, rgba(224, 242, 254, 0.7) 35%, rgba(2, 132, 199, 0.45) 75%, rgba(0, 122, 135, 0.7) 100%);
+  box-shadow: inset -2px -2px 5px rgba(0, 80, 90, 0.35), inset 2px 2px 4px rgba(255, 255, 255, 0.9), 0 4px 10px rgba(0, 122, 135, 0.22);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.water-drop::after {
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 22%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background: #ffffff;
+  filter: blur(0.3px);
+  opacity: 0.92;
+}
+
+.drop-1 { width: 26px; height: 26px; top: 32px; left: 14%; animation: floatDrop 4.5s ease-in-out infinite; }
+.drop-2 { width: 16px; height: 16px; top: 68px; left: 28%; animation: floatDrop 3.8s ease-in-out 0.8s infinite; }
+.drop-3 { width: 32px; height: 32px; top: 40px; right: 14%; animation: floatDrop 5.2s ease-in-out 1.5s infinite; }
+.drop-4 { width: 14px; height: 14px; top: 18px; right: 30%; animation: floatDrop 4.1s ease-in-out 0.4s infinite; }
+.drop-5 { width: 20px; height: 20px; top: 82px; right: 24%; animation: floatDrop 4.8s ease-in-out 2s infinite; }
+
+@keyframes floatDrop {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-7px) scale(1.04); }
 }
 
 /* Avatar with Logo Crop */
 .avatar-wrap {
   position: relative;
-  width: 136px;
-  height: 136px;
-  margin: 0 auto 16px;
+  width: 138px;
+  height: 138px;
+  margin: 14px auto 14px;
   z-index: 2;
 }
 
@@ -215,19 +291,19 @@ body {
   border-radius: 50%;
   background: #ffffff;
   border: 3.5px solid var(--primary);
-  box-shadow: 0 10px 28px var(--secondary-glow);
+  box-shadow: 0 10px 30px var(--secondary-glow);
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  padding: 5px;
   animation: pulseAvatar 3.5s ease-in-out infinite;
 }
 
 @keyframes pulseAvatar {
-  0%, 100% { box-shadow: 0 10px 25px rgba(0, 168, 150, 0.3); }
-  50% { box-shadow: 0 12px 35px rgba(0, 168, 150, 0.55); }
+  0%, 100% { box-shadow: 0 10px 25px rgba(0, 168, 181, 0.28); }
+  50% { box-shadow: 0 14px 38px rgba(0, 168, 181, 0.5); }
 }
 
 .logo-crop-img {
@@ -260,34 +336,39 @@ body {
 }
 
 .clinic-title {
-  font-size: 26px;
+  font-size: 27px;
   font-weight: 800;
   color: var(--primary);
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
   margin-bottom: 2px;
 }
 
 .clinic-subtitle {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--accent-magenta);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   margin-bottom: 8px;
 }
 
 .clinic-tagline {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f3741;
   margin-bottom: 4px;
 }
 
+[data-theme="dark"] .clinic-tagline {
+  color: #99f6e4;
+}
+
 .clinic-tagline-sub {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 11.5px;
+  font-weight: 600;
   color: var(--text-light);
-  letter-spacing: 1px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
 }
 
 .location-pill {

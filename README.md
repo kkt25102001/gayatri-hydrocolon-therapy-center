@@ -90,8 +90,8 @@ Open `js/app.js` and edit the `CLINIC_CONFIG` object at line 7:
 const CLINIC_CONFIG = {
   name: "Gayatri Hydrocolon Therapy Center",
   shortName: "Gayatri Hydrocolon",
-  phone: "+919876543210",       // <-- Change to your actual mobile / clinic number
-  displayPhone: "+91 98765 43210",
+  phone: "+917600445099",       // <-- Clinic primary contact number
+  displayPhone: "+91 7600 445 099",
   email: "gayatrihydrocolon@gmail.com",
   address: "304, 3rd Floor, One Mavdi complex, Near Bapa Sitaram Chowk, Beside Haridarshan School, Mavdi Pal Road, Mavdi, Rajkot-360004, Gujarat",
   instagramUrl: "https://www.instagram.com/gayatrihydrocolonclinic?utm_source=qr&stkn=dTlnOHdjNmNicGIy",
